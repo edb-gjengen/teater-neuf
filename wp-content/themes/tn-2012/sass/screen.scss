@@ -1,0 +1,25 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "960/grid";
+
+/*$ninesixty-columns (default: 12) controls the default number of grid columns
+$ninesixty-grid-width (default: 960px) controls the default overall grid width
+$ninesixty-gutter-width */
+body {
+    
+    #container {
+        @include grid_container;
+        @include clearfix;
+
+        #content{
+            @include grid(12);
+            @include clearfix;
+
+        }
+    } 
+}
