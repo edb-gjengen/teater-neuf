@@ -1,0 +1,13 @@
+/* Border radius hack:
+   TODO: does not work
+*/
+.single-event .event-type:before,
+#featured article .event-type:before,
+#featured article.type-post h1:before,
+#featured #slidernav a span.circle,
+.home #digest_news .post a.permalink:before,
+.big_bullet,
+.btn {
+	behavior: url(css/border-radius.htc);
+}
+
