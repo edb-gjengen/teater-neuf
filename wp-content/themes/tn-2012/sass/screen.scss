@@ -5,21 +5,45 @@
 
 @import "compass/reset";
 @import "compass/utilities/general/clearfix";
+@import "compass/typography/lists/inline-block-list";
 @import "960/grid";
+
+$main-color: #7650b3;
 
 /*$ninesixty-columns (default: 12) controls the default number of grid columns
 $ninesixty-grid-width (default: 960px) controls the default overall grid width
 $ninesixty-gutter-width */
+$ninesixty-grid-width: 1200px; 
 body {
-    
-    #container {
-        @include grid_container;
-        @include clearfix;
+  font-size: 16px;
 
-        #content{
-            @include grid(12);
-            @include clearfix;
+  #container {
+    @include grid_container;
+    @include clearfix;
 
+    #branding {
+      background: $main-color;
+      height: 200px;
+      /* TODO you are here... move menu right. */
+      
+      nav#access {
+        a {
+          color: #ffffff;
         }
-    } 
+        ul {
+          @include inline-block-list;
+          
+          li {
+            margin: 4px;
+          }
+        }
+      }
+    }
+
+    #content{
+      @include grid(12);
+      @include clearfix;
+
+    }
+  } 
 }

@@ -46,7 +46,7 @@
 	<header id="branding" role="banner">
 			<div class="hgroup">
                 <a href="<?php bloginfo('url'); ?>"></a>
-				<div id="site-title"><div class="head"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/teater_neuf.jpg"><span><?php bloginfo( 'name' ); ?></span></a></div></div>
+				<div id="site-title"><div class="head"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/teater_neuf.jpg"></a></div></div>
 			</div>
 
 			<nav id="access" role="navigation">
