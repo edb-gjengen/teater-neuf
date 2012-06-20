@@ -1,4 +1,4 @@
-		<div id="digest_news" class="grid_12 hfeed">
+		<div id="digest-news" class="grid_12 hfeed">
 
 			<h2>Aktuelt</h2>
 
@@ -7,7 +7,7 @@
 					$counter = 1;
 					if ( $digest_news->have_posts() ) : while ( $digest_news->have_posts() ) : $digest_news->the_post();
 				?>
-                    <div class="grid_4<?php
+                    <div class="news-entry grid_4<?php
                     if($counter == 1) { echo " alpha"; }
                     elseif($counter == 3) { echo" omega"; }
                     ?>">

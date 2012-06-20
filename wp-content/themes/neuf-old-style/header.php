@@ -28,14 +28,14 @@
                 js.src = "//connect.facebook.net/nb_NO/all.js#xfbml=1&appId=220213643760";
                 fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
-                <div id="site-topbar"><a href="http://studentersamfundet.no/" title="Det Norske Studentersamfund" class="topbar-logo">Det Norske Studentersamfund</a></div>
+                <div id="site-topbar"><a href="http://studentersamfundet.no/" title="Det Norske Studentersamfund" class="logo">Det Norske Studentersamfund</a></div>
 		<header id="site-header">
-			<div class="container_12" style="margin-left:auto;margin-right:auto">
+			<div id="header-container" class="container_12" style="margin-left:auto;margin-right:auto">
 	
 					<div id="access"><a href="#content">Gå direkte til innholdet</a></div>
 	
 					<div class="site-title grid_7">
-						<a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home" class="betong"><?php bloginfo('name') ?></a>
+						<a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home" class="logo"><?php bloginfo('name') ?></a>
 						</span>
 					</div>
 

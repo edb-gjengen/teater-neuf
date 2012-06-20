@@ -5,17 +5,13 @@ get_header();
 ?>
 <div id="content">
 
-	<div class="container_12">
+    <?php get_template_part( 'eventslider' ); ?>
 
-<?php get_template_part( 'eventslider' ); ?>
+    <?php //get_template_part( 'program' , '3days' ); ?>
+    <?php //get_template_part( 'program' , '6days' ); ?>
+    <?php get_template_part( 'program' , '6days' ); ?>
 
-<?php //get_template_part( 'program' , '3days' ); ?>
-<?php //get_template_part( 'program' , '6days' ); ?>
-<?php get_template_part( 'program' , '6days' ); ?>
-
-<?php get_template_part( 'digest' ); ?>
-
-	</div> <!-- .container_12 -->
+    <?php get_template_part( 'digest' ); ?>
 
 </div> <!-- #content -->
 
