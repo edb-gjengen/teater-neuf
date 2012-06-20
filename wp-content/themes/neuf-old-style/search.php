@@ -5,10 +5,11 @@
 		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			
 			<article <?php neuf_post_class(); ?>>
-				<div class="grid_5">
+
+				<div class="grid_6">
 
 					<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<div class="entry-byline">Av <?php the_author_posts_link(); ?> | Publisert <?php the_date(); ?></div>
+
 					<div class="entry-content"><?php the_excerpt(); ?></div> <!-- .entry-content -->
 
 				</div> <!-- .grid_6 -->
@@ -33,7 +34,6 @@
 					<?php } // end if attachments ?>
 
 			</article> <!-- .post -->
-			<hr />
 
 		<?php endwhile; endif; ?>
 
