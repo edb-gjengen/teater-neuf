@@ -10,7 +10,7 @@
 
 			<article <?php neuf_post_class(); ?>>
 
-				<div class="grid_6">
+				<div class="body grid_6">
 					<?php
 						$html = '<div class="event-type">' . implode( ', ' , $post->event_types ) . '</div>';
 						echo $html;
@@ -24,7 +24,7 @@
 
 				</div>
 
-				<div class="grid_6">
+				<div class="featured-image grid_6">
 
 					<?php the_post_thumbnail( 'large' , array( 'style' => 'display:block;margin:auto;' ) ); ?>
 

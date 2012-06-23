@@ -8,7 +8,7 @@
 			
 			<article <?php neuf_post_class(); ?>>
 
-				<div class="grid_6">
+				<div class="body grid_6">
 
 					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
@@ -16,7 +16,7 @@
 
 				</div> <!-- .grid_6 -->
 
-				<div class="grid_6">
+				<div class="featured-image grid_6">
 
 					<?php the_post_thumbnail( 'six-column-slim' , array( 'style' => 'display:block;margin:auto;' ) ); ?>
 

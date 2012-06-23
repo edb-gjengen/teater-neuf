@@ -1,8 +1,8 @@
 		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-			<div <?php neuf_post_class(); ?>>
+			<article <?php neuf_post_class(); ?>>
 
-				<div class="grid_6">
+				<div class="body grid_6">
 
 					<h1 class="entry-title"><?php the_title(); ?></h1>
                                         <?php if( get_post_type() == 'association' ): ?>
@@ -19,7 +19,7 @@
 
 				</div>
 
-				<div class="grid_6">
+				<div class="featured-image">
 
 					<?php the_post_thumbnail( 'large' , array( 'style' => 'display:block;margin:auto;' ) ); ?>
 
@@ -27,6 +27,6 @@
 
 				<?php neuf_maybe_display_gallery(); ?>
 
-			</div> <!-- .hentry -->
+			</article> <!-- .hentry -->
 
 		<?php endwhile; endif; ?>

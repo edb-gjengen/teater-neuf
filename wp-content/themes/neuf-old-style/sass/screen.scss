@@ -6,9 +6,13 @@
 @import "compass/reset";
 @import "compass/utilities/general/clearfix";
 @import "compass/typography/lists";
+@import "compass/css3/text-shadow";
 @import "960/grid";
 
 $main-color: #7650b3;
+$old-color: #a3626a;
+$alt-color: #2f2524;
+$link-color: lighten($main-color, 5%);
 
 /*$ninesixty-columns (default: 12) controls the default number of grid columns
 $ninesixty-grid-width (default: 960px) controls the default overall grid width
@@ -16,13 +20,39 @@ $ninesixty-gutter-width */
 $ninesixty-grid-width: 1200px; 
 
 body {
+    /* Base styles */
     font: 14px Arial, sans-serif;
     line-height: 1.5em;
 
     h1,h2,h3,h4 {
         font-family: Arvo, Georgia, serif;
         font-weight: bold;
-        font-size: 18px;
+        line-height: 1.5em;
+        @include single-text-shadow(darken(#fff, 10%), 1px, 1px, 0);
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2,h3,h4 {
+        font-size: 1.5em;
+    }
+    a {
+        color: $link-color;
+        text-decoration: none;
+        @include single-text-shadow(darken(#fff, 5%), 1px, 1px, 0);
+
+        &:link { color: $link-color; }
+        &:visited { color: $link-color; }
+        &:hover { text-decoration: underline; }
+        &:active { color: $link-color; }
+    }
+    ul {
+        list-style: disc;
+        padding-left: 25px;
+
+        li {
+            display: list-item;
+        }
     }
 
     #site-header {
@@ -54,19 +84,22 @@ body {
             }
             #menu {
                 @include grid(5);
-                @extend h1;
+                @extend h2;
                 text-transform: uppercase;
 
                 a {
                     color: #ffffff;
                     text-decoration: none;
+
+                    @include single-text-shadow(darken(#fff, 90%), 1px, 1px, 0);
                 }
+
                 ul {
                     @include inline-list;
 
                     li {
                         border-right: 1px solid #FFFFE1;
-                        padding: 4px;
+                        padding: 6px;
 
                         &.social-icon {
                             border: 0px;
@@ -105,21 +138,44 @@ body {
 
         #featured {
             @include grid(12);
+            a h1 {
+                color: #000;
+            }
 
+            #slider {
+                .featured-text {
+                    @include grid(6);
+                    @include alpha();
+                }
+            
+                .featured-image {
+                    @include grid(6);
+                    @include omega();
+                }
+
+            }
         }
         #program-6days {
             @include grid(12);
-            .day-1 {
-                @include alpha();
+            .day {
+                @include grid(2);
 
-            }
-            .day-6 {
-                @include omega();
+                &.alpha {
+                    @include alpha();
+
+                }
+                &.omega {
+                    @include omega();
+                }
             }
         }
         #digest-news {
             @include grid(12);
             margin-top: 25px;
+
+            h2 a {
+                color: #000;
+            }
 
             .news-entry {
                 @include grid(4);
@@ -132,6 +188,30 @@ body {
                 }
             }
         }
+        .body {
+            @include grid(6);
+            margin-bottom: 25px;
+        }
+
+        .featured-image {
+            @include grid(6);
+        }
+
+        .hentry {
+        }
+        #social-sharing {
+            margin-top: 10px;
+
+            .share-twitter {
+                display: inline-block;
+            }
+            .share-facebook {
+                display: inline-block;
+                position: relative;
+                bottom: 3px;
+            }
+
+        }
     }
     #site-footer {
         background-color: $main-color;
@@ -139,6 +219,21 @@ body {
         margin-top: 25px;
         padding-top: 25px;
         padding-bottom: 25px;
+        @include single-text-shadow(lighten($main-color, 10%), 1px, 1px, 0);
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            @include single-text-shadow(darken(#fff, 90%), 1px, 1px, 0);
+
+            &:link { color: #fff; }
+            &:visited { color: #fff; }
+            &:hover { text-decoration: underline; }
+            &:active { color: #fff; }
+        }
+        h1,h2,h3,h4 {
+            @include single-text-shadow(lighten($main-color, 10%), 1px, 1px, 0);
+        }
 
         #footer-container {
             @include grid_container;

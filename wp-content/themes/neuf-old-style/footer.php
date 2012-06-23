@@ -2,9 +2,9 @@
 <footer id="site-footer">
 	<div id="footer-container">
         <div id="footer-about" class="grid_4 alpha">
-            <h2>Konsertforeningen Betong</h2>
+            <h2>Teater Neuf</h2>
             <p>
-            Konsertforeningen Betong er ansvarlige for konsertdriften på Det Norske Studentersamfund i Oslo, også kjent som Chateau Neuf. Vi disponerer konsertscenene Betong og Klubbscenen, to av byens største og beste av sitt slag. Tidligere har blant annet White Stripes, Ramones, Pearl Jam, Frank Zappa, Xzibit og Sigur Rós gjestet Det Norske Studentersamfund.
+                Studentteateret i Oslo er Norges største og eldste studentteater og Studentersamfundets største forening. Vi holder til på Chateau Neuf hvor vi har vår egen scene, Teaterscenen, og driver teater fra dag til dag. Vi er et prosjektbasert teater, noe som vil si at vi ikke har en fast gruppe skuespillere, regissører, scenografer o.l., men er åpne for hvem som helst å komme med prosjektbeskrivelser til nye forestillinger eller undergrupper av teateret. 
             </p>
         </div> <!-- #footer-about -->
     </div>
