@@ -116,7 +116,7 @@ body #site-header {
   padding-top: 25px;
   padding-bottom: 25px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   margin-top: 30px;
 }
 body #site-header #header-container {
@@ -312,6 +312,7 @@ body #content #program-6days {
   margin-left: 10px;
   margin-right: 10px;
   width: 1180px;
+  margin-top: 25px;
 }
 body #content #program-6days .day {
   display: inline;
