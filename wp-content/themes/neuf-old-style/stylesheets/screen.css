@@ -173,6 +173,12 @@ body #site-header #header-container #menu ul li {
 body #site-header #header-container #menu ul li.social-icon {
   border: 0px;
 }
+body #site-header #header-container #menu ul li.social-icon #facebook-icon {
+  padding-left: 6px;
+}
+body #site-header #header-container #menu ul li:first-child {
+  padding-left: 0px;
+}
 body #site-topbar {
   position: fixed;
   top: 0px;

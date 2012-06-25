@@ -113,6 +113,13 @@ body {
 
                         &.social-icon {
                             border: 0px;
+
+                            #facebook-icon {
+                                padding-left: 6px;
+                            }
+                        }
+                        &:first-child {
+                            padding-left: 0px;
                         }
                     }
                 }
