@@ -131,7 +131,7 @@ body #site-header #header-container .site-title {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 680px;
+  width: 580px;
 }
 body #site-header #header-container .site-title .logo {
   background: url("../img/teater_neuf.jpg") no-repeat;
@@ -141,13 +141,16 @@ body #site-header #header-container .site-title .logo {
   margin-top: 10px;
   text-indent: -9999px;
   position: relative;
+  bottom: 10px;
 }
 body #site-header #header-container #menu {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 480px;
+  width: 580px;
+  position: relative;
+  top: 36px;
   text-transform: uppercase;
 }
 body #site-header #header-container #menu a {
