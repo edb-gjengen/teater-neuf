@@ -54,6 +54,13 @@ body {
             display: list-item;
         }
     }
+    strong {
+        font-weight: bold;
+    }
+    p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 
     #site-header {
         background-color: $main-color;
@@ -138,14 +145,88 @@ body {
 
         #featured {
             @include grid(12);
+            padding-bottom: 25px;
             a h1 {
                 color: #000;
+            }
+
+            #prevLink {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-right: 16px solid $main-color;
+                cursor: pointer;
+
+                &:hover {
+                    border-right: 16px solid lighten($main-color, 20%);
+                }
+            }
+            #nextLink {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 16px solid $main-color;
+                cursor: pointer;
+
+                &:hover {
+                    border-left: 16px solid lighten($main-color, 20%);
+                }
+            }
+            #slidernav {
+                display: inline-block;
+                a {
+                    content: '';
+                    background: lighten($main-color, 20%);
+                    border-radius: 50%;
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    z-index: 10;
+                    margin-left: 4px;
+                    margin-right: 4px;
+
+                    &.activeSlide {
+                        background: $main-color;
+
+                    }
+                }
+            }
+            #slider-buttons {
+                position: relative;
+                top: 350px;
+                z-index: 10;
             }
 
             #slider {
                 .featured-text {
                     @include grid(6);
                     @include alpha();
+                    height: 328px;
+
+                    .entry-meta {
+                        position: absolute;
+                        bottom: 6px;
+                        color: #fff;
+                        @include single-text-shadow(darken(#fff, 90%), 1px, 1px, 0);
+                        background: darken(#fff, 40%);
+                        padding: 4px;
+
+                        .datetime {
+                            @include grid(2);
+                            @include alpha();
+                        }
+                        .venue {
+                            @include grid(2);
+                            @include omega();
+                        }
+                        .price {
+                            @include grid(2);
+                        }
+                    }
                 }
             
                 .featured-image {
@@ -212,6 +293,75 @@ body {
             }
 
         }
+        .byline {
+            color: #aaa;
+
+            .author {
+                color: #000;
+                font-weight: bold;
+            }
+        }
+        .entry-content {
+            margin-top: 15px;
+        }
+        #program-text {
+            @include grid_container();
+            @include clearfix();
+            @include grid(12);
+        }
+        #program-list {
+            @include grid_container();
+            @include clearfix();
+
+            .day {
+                @include grid(12);
+                padding-top: 20px;
+                font-weight: bold;
+            }
+            .month {
+                @include grid(12);
+            }
+
+            .event {
+                @include grid(12);
+
+                .body {
+                    position: relative;
+                    @include grid(6);
+                    @include alpha();
+                    height: 161px;
+                    
+                    .entry-meta {
+                        position: absolute;
+                        bottom: 0px;
+                        color: #fff;
+                        @include single-text-shadow(darken(#fff, 90%), 1px, 1px, 0);
+                        background: darken(#fff, 40%);
+                        padding: 4px;
+
+                        .datetime {
+                            @include grid(2);
+                            @include alpha();
+                        }
+                        .venue {
+                            @include grid(2);
+                            @include alpha();
+                            @include omega();
+                        }
+                        .price {
+                            @include grid(2);
+                        }
+                    }
+                }
+
+                .thumbnail {
+                    @include grid(6);
+                    @include omega();
+                }
+
+            }
+
+        }
     }
     #site-footer {
         background-color: $main-color;
@@ -219,7 +369,8 @@ body {
         margin-top: 25px;
         padding-top: 25px;
         padding-bottom: 25px;
-        @include single-text-shadow(lighten($main-color, 10%), 1px, 1px, 0);
+        color: #fff;
+        @include single-text-shadow(darken(#fff, 90%), 1px, 1px, 0);
 
         a {
             color: #fff;
@@ -232,6 +383,7 @@ body {
             &:active { color: #fff; }
         }
         h1,h2,h3,h4 {
+            color: #000;
             @include single-text-shadow(lighten($main-color, 10%), 1px, 1px, 0);
         }
 
@@ -240,7 +392,7 @@ body {
             @include clearfix;
 
             #footer-about {
-                @include grid(4);
+                @include grid(5);
             }
         }
         #kolofon {

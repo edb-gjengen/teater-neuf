@@ -31,9 +31,11 @@ $news = new WP_Query( 'type=post' );
 ?>
 <?php if ($events->have_posts()) : ?>
 	<section id="featured" class="clearfix">
-		<a href="#" id="prevLink">Forrige</a>
-		<a href="#" id="nextLink">Neste</a>
-		<div id="slidernav"></div>
+        <div id="slider-buttons">
+            <div id="prevLink"></div>
+            <div id="slidernav"></div>
+            <div id="nextLink"></div>
+        </div>
 		<div id="slider"> 
 		<?php
 		if ($news->have_posts()) : $news->the_post(); ?>
@@ -56,18 +58,13 @@ $news = new WP_Query( 'type=post' );
 			<article id="post-<?php the_ID(); ?>" <?php neuf_post_class(); ?>>
 				<a class="permalink blocklink" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
 					<header class="featured-text grid_6">
-						<?php
-							$event_array = get_the_terms( $post->ID , 'event_type' );
-							foreach ( $event_array as $event_type )
-								$post->event_types[] = $event_type->name;
-							$html = '<div class="type">' . implode( ', ' , $post->event_types ) . '</div>';
-							echo $html;
-						?>
 						<h1><?php the_title(); ?></h1>
-						<div class="datetime"><?php echo ucfirst( date_i18n( 'l j. F' , get_post_meta(get_the_ID() , '_neuf_events_starttime' , true ) ) ); ?></div>
-						<div class="price"><?php echo ($price = neuf_get_price( $post )) ? $price : "Gratis"; ?></div>
-						<div class="venue"><?php echo get_post_meta(get_the_ID(), '_neuf_events_venue',true);?></div>
 						<?php the_excerpt(); ?>
+                        <div class="entry-meta">
+                            <div class="datetime"><?php echo ucfirst( date_i18n( 'l j. F' , get_post_meta(get_the_ID() , '_neuf_events_starttime' , true ) ) ); ?></div>
+                            <div class="price"><?php echo ($price = neuf_get_price( $post )) ? $price : "Gratis"; ?></div>
+                            <div class="venue"><?php echo get_post_meta(get_the_ID(), '_neuf_events_venue',true);?></div>
+                        </div>
 					</header>
 					<div class="featured-image grid_6">
 						<?php the_post_thumbnail( 'six-column-promo' ); ?>
