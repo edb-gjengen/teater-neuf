@@ -85,7 +85,7 @@ if ( $events->have_posts() ) :
                     <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo the_title(); ?></a></h2>
                     <span class="excerpt"><?php the_excerpt(); ?></span>
                     <div class="entry-meta">
-                        <div class="datetime"><?php echo ucfirst( date_i18n( 'l j. F' , get_post_meta(get_the_ID() , '_neuf_events_starttime' , true ) ) ); ?></div>
+                        <div class="datetime"><?php echo ucfirst( date_i18n( 'l j. F H.i' , get_post_meta(get_the_ID() , '_neuf_events_starttime' , true ) ) ); ?></div>
                         <div class="price"><?php echo ($price = neuf_get_price( $post )) ? $price : "Gratis"; ?></div>
                         <div class="venue"><?php echo get_post_meta(get_the_ID(), '_neuf_events_venue',true);?></div>
                     </div>
