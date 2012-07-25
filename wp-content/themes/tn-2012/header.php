@@ -1,56 +1,46 @@
-<?php
-/**
- * The Header for our theme.
- */
-?>
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <meta name="viewport" content="width=device-width" />
-    <title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
-	global $page, $paged;
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="no" lang="no">
+	<head>
+	<meta charset="utf-8" />
+		<meta name="robots" content="index,follow" />
 
-	wp_title( '|', true, 'right' );
+	<?php neuf_doctitle(); ?>
 
-	// Add the blog name.
-	bloginfo( 'name' );
+		<link rel="icon" type="image/png" href="favicon.png" />
 
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+<?php // @todo Make sure our feeds work properly :) ?>
+		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('url'); ?>/feed/" title="Det Norske Studentersamfund (nyheter)" />
+		<link rel="alternate" type="application/rss+xml" href="http://studentersamfundet.no/syndikering/kommende-program/" title="Det Norske Studentersamfund (kommende program)" />
+		<link href="<?php bloginfo( 'stylesheet_url' ); ?>" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Arvo:700,400italic' rel='stylesheet' type='text/css'>
+	<?php wp_head(); ?>
+                <!--[if lt IE 9]>
+                    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <![endif]-->
+	</head>
 
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Side %s', 'teaterneuf' ), max( $paged, $page ) );
+	<body <?php neuf_body_class(); ?>>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/nb_NO/all.js#xfbml=1&appId=220213643760";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div id="site-topbar"><a href="http://studentersamfundet.no/" title="Det Norske Studentersamfund" class="logo">Det Norske Studentersamfund</a></div>
+		<header id="site-header">
+			<div id="header-container" class="container_12" style="margin-left:auto;margin-right:auto">
+	
+					<div id="access"><a href="#content">Gå direkte til innholdet</a></div>
+	
+					<div class="site-title grid_7">
+						<a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home" class="logo"><?php bloginfo('name') ?></a>
+						</span>
+					</div>
 
-	?></title>
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <?php wp_head(); ?>
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/stylesheets/ie.css" />
-    <![endif]-->        
-</head>
+<?php get_template_part( 'menu' ); ?>
 
-<body <?php body_class(); ?>>
-
-<section id="container">
-<div id="page" class="hfeed">
-	<header id="branding" role="banner">
-			<div class="hgroup">
-                <a href="<?php bloginfo('url'); ?>"></a>
-				<div id="site-title"><div class="head"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/teater_neuf.jpg"></a></div></div>
-			</div>
-
-			<nav id="access" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
-			</nav><!-- #access -->
-	</header><!-- #branding -->
+			</div> 
+		</header><!--  #site-header -->
 

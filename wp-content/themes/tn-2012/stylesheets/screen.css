@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, body #site-header #header-container #menu, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -62,53 +62,485 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 $ninesixty-grid-width (default: 960px) controls the default overall grid width
 $ninesixty-gutter-width */
 body {
-  font-size: 16px;
+  /* Base styles */
+  font: 14px Arial, sans-serif;
+  line-height: 1.5em;
 }
-body #container {
+body h1, body h2, body #site-header #header-container #menu, body h3, body h4 {
+  font-family: Arvo, Georgia, serif;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-shadow: #e6e6e6 1px 1px 0;
+}
+body h1 {
+  font-size: 2.5em;
+}
+body h2, body #site-header #header-container #menu, body h3, body h4 {
+  font-size: 1.5em;
+}
+body a {
+  color: #8462bb;
+  text-decoration: none;
+  text-shadow: #f2f2f2 1px 1px 0;
+}
+body a:link {
+  color: #8462bb;
+}
+body a:visited {
+  color: #8462bb;
+}
+body a:hover {
+  text-decoration: underline;
+}
+body a:active {
+  color: #8462bb;
+}
+body ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+body ul li {
+  display: list-item;
+}
+body strong {
+  font-weight: bold;
+}
+body p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+body #site-header {
+  background-color: #7650b3;
+  min-width: 100%;
+  height: 90px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+body #site-header #header-container {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
   overflow: hidden;
   *zoom: 1;
 }
-body #container #branding {
-  background: #7650b3;
-  height: 200px;
-  /* TODO you are here... move menu right. */
+body #site-header #header-container .site-title {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
 }
-body #container #branding nav#access a {
+body #site-header #header-container .site-title .logo {
+  background: url("../img/teater_neuf.jpg") no-repeat;
+  display: inline-block;
+  width: 340px;
+  height: 120px;
+  margin-top: 10px;
+  text-indent: -9999px;
+  position: relative;
+  bottom: 10px;
+}
+body #site-header #header-container #menu {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  position: relative;
+  top: 36px;
+  text-transform: uppercase;
+}
+body #site-header #header-container #menu a {
   color: #ffffff;
+  text-decoration: none;
+  text-shadow: #1a1a1a 1px 1px 0;
 }
-body #container #branding nav#access ul {
-  margin: 0;
-  padding: 0;
-  border: 0;
+body #site-header #header-container #menu ul {
+  list-style-type: none;
+}
+body #site-header #header-container #menu ul, body #site-header #header-container #menu ul li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+body #site-header #header-container #menu ul li {
+  border-right: 1px solid #FFFFE1;
+  padding: 6px;
+}
+body #site-header #header-container #menu ul li.social-icon {
+  border: 0px;
+}
+body #site-header #header-container #menu ul li.social-icon #facebook-icon {
+  padding-left: 6px;
+}
+body #site-header #header-container #menu ul li:first-child {
+  padding-left: 0px;
+}
+body #site-topbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #E99835;
+  width: 100%;
+  height: 30px;
+  z-index: 9999;
+  text-align: center;
+}
+body #site-topbar .logo {
+  background: url("../img/dns_30px.png") no-repeat;
+  display: inline-block;
+  width: 271px;
+  height: 100%;
+  margin-top: 4px;
+  text-indent: -9999px;
+}
+body #access {
+  display: none;
+}
+body #content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
   overflow: hidden;
   *zoom: 1;
 }
-body #container #branding nav#access ul li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  white-space: nowrap;
-}
-body #container #branding nav#access ul li {
-  *display: inline;
-}
-body #container #branding nav#access ul li {
-  margin: 4px;
-}
-body #container #content {
+body #content #featured {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 1180px;
+  padding-bottom: 25px;
+}
+body #content #featured a h1 {
+  color: #000;
+}
+body #content #featured #prevLink {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 16px solid #7650b3;
+  cursor: pointer;
+}
+body #content #featured #prevLink:hover {
+  border-right: 16px solid #ae97d2;
+}
+body #content #featured #nextLink {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 16px solid #7650b3;
+  cursor: pointer;
+}
+body #content #featured #nextLink:hover {
+  border-left: 16px solid #ae97d2;
+}
+body #content #featured #slidernav {
+  display: inline-block;
+}
+body #content #featured #slidernav a {
+  content: '';
+  background: #ae97d2;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  z-index: 10;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+body #content #featured #slidernav a.activeSlide {
+  background: #7650b3;
+}
+body #content #featured #slider-buttons {
+  position: relative;
+  top: 350px;
+  z-index: 10;
+}
+body #content #featured #slider .featured-text {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  margin-left: 0;
+  height: 328px;
+}
+body #content #featured #slider .featured-text .entry-meta {
+  position: absolute;
+  bottom: 6px;
+  color: #fff;
+  text-shadow: #1a1a1a 1px 1px 0;
+  background: #999999;
+  padding: 4px;
+}
+body #content #featured #slider .featured-text .entry-meta .datetime {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+  margin-left: 0;
+}
+body #content #featured #slider .featured-text .entry-meta .venue {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+  margin-right: 0;
+}
+body #content #featured #slider .featured-text .entry-meta .price {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+}
+body #content #featured #slider .featured-image {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  margin-right: 0;
+}
+body #content #program-6days {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+  margin-top: 25px;
+}
+body #content #program-6days .day {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+}
+body #content #program-6days .day.alpha {
+  margin-left: 0;
+}
+body #content #program-6days .day.omega {
+  margin-right: 0;
+}
+body #content #digest-news {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+  margin-top: 25px;
+}
+body #content #digest-news h2 a, body #content #digest-news #site-header #header-container #menu a, body #site-header #header-container #content #digest-news #menu a {
+  color: #000;
+}
+body #content #digest-news .news-entry {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 380px;
+}
+body #content #digest-news .news-entry.alpha {
+  margin-left: 0;
+}
+body #content #digest-news .news-entry.omega {
+  margin-right: 0;
+}
+body #content .body {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  margin-bottom: 25px;
+}
+body #content .featured-image {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+}
+body #content #social-sharing {
+  margin-top: 10px;
+}
+body #content #social-sharing .share-twitter {
+  display: inline-block;
+}
+body #content #social-sharing .share-facebook {
+  display: inline-block;
+  position: relative;
+  bottom: 3px;
+}
+body #content .byline {
+  color: #aaa;
+}
+body #content .byline .author {
+  color: #000;
+  font-weight: bold;
+}
+body #content .entry-content {
+  margin-top: 15px;
+}
+body #content #program-text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
   overflow: hidden;
   *zoom: 1;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+}
+body #content #program-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  overflow: hidden;
+  *zoom: 1;
+}
+body #content #program-list .day {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+body #content #program-list .month {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+}
+body #content #program-list .event {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+}
+body #content #program-list .event .body {
+  position: relative;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  margin-left: 0;
+  height: 161px;
+}
+body #content #program-list .event .body .entry-meta {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  text-shadow: #1a1a1a 1px 1px 0;
+  background: #999999;
+  padding: 4px;
+}
+body #content #program-list .event .body .entry-meta .datetime {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+  margin-left: 0;
+}
+body #content #program-list .event .body .entry-meta .venue {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+  margin-left: 0;
+  margin-right: 0;
+}
+body #content #program-list .event .body .entry-meta .price {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 180px;
+}
+body #content #program-list .event .thumbnail {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  margin-right: 0;
+}
+body #site-footer {
+  background-color: #7650b3;
+  min-width: 100%;
+  margin-top: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #fff;
+  text-shadow: #1a1a1a 1px 1px 0;
+}
+body #site-footer a {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: #1a1a1a 1px 1px 0;
+}
+body #site-footer a:link {
+  color: #fff;
+}
+body #site-footer a:visited {
+  color: #fff;
+}
+body #site-footer a:hover {
+  text-decoration: underline;
+}
+body #site-footer a:active {
+  color: #fff;
+}
+body #site-footer h1, body #site-footer h2, body #site-footer #site-header #header-container #menu, body #site-header #header-container #site-footer #menu, body #site-footer h3, body #site-footer h4 {
+  color: #000;
+  text-shadow: #9274c2 1px 1px 0;
+}
+body #site-footer #footer-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  overflow: hidden;
+  *zoom: 1;
+}
+body #site-footer #footer-container #footer-about {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 480px;
+}
+body #site-footer #kolofon {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  overflow: hidden;
+  *zoom: 1;
+}
+body #site-footer #kolofon #kolofon-text {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+  margin-top: 25px;
 }

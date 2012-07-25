@@ -1,36 +1,34 @@
-<?php
-/**
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+		<div id="content" class="container_12">
 
-		<div id="container">
-			<div id="content">
+			<h1 class="page-title grid_12"><?php neuf_page_title(); ?></h1>
 
-			<?php if ( have_posts() ) : ?>
+		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+			
+			<article <?php neuf_post_class(); ?>>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<div class="body grid_6">
 
-					<?php the_content(); ?>
+					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-				<?php endwhile; ?>
+					<div class="entry-content"><?php the_excerpt(); ?></div> <!-- .entry-content -->
 
-				<?php // todo footer ?>
+				</div> <!-- .grid_6 -->
 
-			<?php else : ?>
+				<div class="featured-image grid_6">
 
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-                                                Nothing.
-					</header><!-- .entry-header -->
+					<?php the_post_thumbnail( 'six-column-slim' , array( 'style' => 'display:block;margin:auto;' ) ); ?>
 
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
+				</div> <!-- .grid_6 -->
 
-			<?php endif; ?>
+			</article> <!-- .post -->
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+		<?php endwhile; endif; ?>
+
+
+<?php posts_nav_link(); ?>
+
+</div> <!-- #content -->
 
 <?php get_footer(); ?>

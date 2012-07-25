@@ -1,32 +1,18 @@
+<?php
 
-<?php get_header(); ?>
+get_header();
 
-  <div id="content">
+?>
+<div id="content">
 
-  <?php if ( have_posts() ) : ?>
+    <?php get_template_part( 'eventslider' ); ?>
 
-    <?php /* Start the Loop */ ?>
-    <?php while ( have_posts() ) : the_post(); ?>
+    <?php //get_template_part( 'program' , '3days' ); ?>
+    <?php //get_template_part( 'program' , '6days' ); ?>
+    <?php get_template_part( 'program' , '6days' ); ?>
 
-      <?php // todo content
-      the_content(); ?>
+    <?php get_template_part( 'digest' ); ?>
 
-    <?php endwhile; ?>
-
-    <?php // todo footer ?>
-
-  <?php else : ?>
-
-    <article id="post-0" class="post no-results not-found">
-      <header class="entry-header">
-                                            Nothing.
-      </header><!-- .entry-header -->
-
-      </div><!-- .entry-content -->
-    </article><!-- #post-0 -->
-
-  <?php endif; ?>
-
-  </div><!-- #content -->
+</div> <!-- #content -->
 
 <?php get_footer(); ?>
