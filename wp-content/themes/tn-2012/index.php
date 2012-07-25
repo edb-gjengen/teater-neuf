@@ -2,7 +2,7 @@
 
 		<div id="content">
 
-			<h1 class="page-title grid_12"><?php wp_title("", true); ?></h1>
+			<h1 class="page-title"><?php wp_title("", true); ?></h1>
 
 		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			

@@ -491,8 +491,10 @@ body #content .text-body {
   margin-left: 10px;
   margin-right: 10px;
   width: 580px;
-  margin-left: 0;
   margin-bottom: 20px;
+}
+body #content .page-title {
+  margin-left: 10px;
 }
 body #content .post {
   overflow: hidden;

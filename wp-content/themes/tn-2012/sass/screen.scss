@@ -376,9 +376,11 @@ body {
         }
 		.text-body {
 			@include grid(6);
-			@include alpha();
 			margin-bottom: 20px;
 
+		}
+		.page-title {
+			margin-left: 10px;
 		}
 		.post {
 			@include clearfix();
