@@ -80,9 +80,9 @@ body {
                 @include grid(6);
 
                 .logo {
-                    background: url('../img/teater_neuf.jpg') no-repeat;
+                    background: url('../img/teater_neuf_logo.png') no-repeat;
                     display: inline-block;
-                    width: 340px;
+                    width: 185px;
                     height: 120px;
                     margin-top: 10px;
                     text-indent: -9999px;
@@ -374,6 +374,16 @@ body {
             }
 
         }
+		.text-body {
+			@include grid(6);
+			@include alpha();
+			margin-bottom: 20px;
+
+		}
+		.post {
+			@include clearfix();
+
+		}
     }
     #site-footer {
         background-color: $main-color;
@@ -405,6 +415,11 @@ body {
 
             #footer-about {
                 @include grid(5);
+
+				a.black {
+					color: #000;
+					@include single-text-shadow(lighten($main-color, 10%), 1px, 1px, 0);
+				}
             }
         }
         #kolofon {

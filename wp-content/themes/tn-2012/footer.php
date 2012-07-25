@@ -2,10 +2,8 @@
 <footer id="site-footer">
 	<div id="footer-container">
         <div id="footer-about" class="grid_4 alpha">
-            <h2>Teater Neuf</h2>
-            <p>
-                Studentteateret i Oslo er Norges største og eldste studentteater og Studentersamfundets største forening. Vi holder til på Chateau Neuf hvor vi har vår egen scene, Teaterscenen, og driver teater fra dag til dag. Vi er et prosjektbasert teater, noe som vil si at vi ikke har en fast gruppe skuespillere, regissører, scenografer o.l., men er åpne for hvem som helst å komme med prosjektbeskrivelser til nye forestillinger eller undergrupper av teateret. 
-            </p>
+            <h2><a href="om-oss/" class="black">Teater Neuf</a></h2>
+            <p>Studentteateret i Oslo er Norges største og eldste studentteater og Studentersamfundets største forening. Vi holder til på Chateau Neuf hvor vi har vår egen scene, Teaterscenen, og driver teater fra dag til dag. </p>
         </div> <!-- #footer-about -->
     </div>
 

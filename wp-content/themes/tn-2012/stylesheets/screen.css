@@ -134,9 +134,9 @@ body #site-header #header-container .site-title {
   width: 580px;
 }
 body #site-header #header-container .site-title .logo {
-  background: url("../img/teater_neuf.jpg") no-repeat;
+  background: url("../img/teater_neuf_logo.png") no-repeat;
   display: inline-block;
-  width: 340px;
+  width: 185px;
   height: 120px;
   margin-top: 10px;
   text-indent: -9999px;
@@ -485,6 +485,19 @@ body #content #program-list .event .thumbnail {
   width: 580px;
   margin-right: 0;
 }
+body #content .text-body {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+body #content .post {
+  overflow: hidden;
+  *zoom: 1;
+}
 body #site-footer {
   background-color: #7650b3;
   min-width: 100%;
@@ -528,6 +541,10 @@ body #site-footer #footer-container #footer-about {
   margin-left: 10px;
   margin-right: 10px;
   width: 480px;
+}
+body #site-footer #footer-container #footer-about a.black {
+  color: #000;
+  text-shadow: #9274c2 1px 1px 0;
 }
 body #site-footer #kolofon {
   margin-left: auto;
