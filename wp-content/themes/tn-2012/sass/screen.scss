@@ -374,6 +374,7 @@ body {
             }
 
         }
+
 		.text-body {
 			@include grid(6);
 			margin-bottom: 20px;
@@ -416,7 +417,7 @@ body {
             @include clearfix;
 
             #footer-about {
-                @include grid(5);
+                @include grid(6);
 
 				a.black {
 					color: #000;

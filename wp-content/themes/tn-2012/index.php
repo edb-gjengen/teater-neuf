@@ -17,9 +17,9 @@
 
 				</div>
 
-				<div class="featured-image">
+				<div class="thumbnail">
 
-					<?php the_post_thumbnail( 'six-column-slim' , array( 'style' => 'display:block;margin:auto;' ) ); ?>
+					<?php the_post_thumbnail( 'six-column-slim' ); ?>
 
 				</div>
 
