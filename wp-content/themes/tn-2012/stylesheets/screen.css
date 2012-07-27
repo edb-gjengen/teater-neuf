@@ -493,6 +493,14 @@ body #content .text-body {
   width: 580px;
   margin-bottom: 20px;
 }
+body #content .thumbnail {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  margin-bottom: 20px;
+}
 body #content .page-title {
   margin-left: 10px;
 }
