@@ -109,6 +109,9 @@ body p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+body em {
+  font-style: italic;
+}
 body #site-header {
   background-color: #7650b3;
   min-width: 100%;
@@ -116,7 +119,7 @@ body #site-header {
   padding-top: 25px;
   padding-bottom: 25px;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   margin-top: 30px;
 }
 body #site-header #header-container {
@@ -318,7 +321,7 @@ body #content #program-6days {
   margin-left: 10px;
   margin-right: 10px;
   width: 1180px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 body #content #program-6days .day {
   display: inline;
@@ -339,7 +342,7 @@ body #content #digest-news {
   margin-left: 10px;
   margin-right: 10px;
   width: 1180px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 body #content #digest-news h2 a, body #content #digest-news #site-header #header-container #menu a, body #site-header #header-container #content #digest-news #menu a {
   color: #000;
@@ -356,6 +359,11 @@ body #content #digest-news .news-entry.alpha {
 }
 body #content #digest-news .news-entry.omega {
   margin-right: 0;
+}
+body #content #digest-news .news-entry .entry-meta {
+  font-size: 12px;
+  line-height: 1em;
+  padding-bottom: 10px;
 }
 body #content .body {
   display: inline;

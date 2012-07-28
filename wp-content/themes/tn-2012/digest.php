@@ -12,8 +12,9 @@
                     elseif($counter == 3) { echo" omega"; }
                     ?>">
 					<article id="post-<?php the_ID(); ?>" <?php neuf_post_class(); ?>>
-				<a class="permalink" href="<?php the_permalink(); ?>" title="Permalenke til <?php the_title(); ?>"><?php the_title(); ?></a>
-                                                <div class="entry-summary"><?php echo linkify(trim_excerpt(get_the_excerpt(), 30), '/\[\.\.\.\]/', get_permalink()); ?></div>
+						<a class="permalink" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+						<div class="entry-meta byline"><span class="entry-date"><?php the_date('l d. M'); ?>, <?php the_time('G.i'); ?></span></div>
+						<div class="entry-summary"><?php echo linkify(trim_excerpt(get_the_excerpt(), 30), '/\[\.\.\.\]/', get_permalink()); ?></div>
                     </article>
                 </div>
 					<?php

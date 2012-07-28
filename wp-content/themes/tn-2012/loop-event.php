@@ -14,7 +14,7 @@
 
 				<div class="featured-image grid_6">
 
-					<?php the_post_thumbnail( 'large' , array( 'style' => 'display:block;margin:auto;' ) ); ?>
+					<?php the_post_thumbnail( array('580', '800') , array( 'style' => 'display:block;margin:auto;' ) ); ?>
 
 				</div>
 
