@@ -11,7 +11,7 @@
 				<div class="text-body">
 
 					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<div class="entry-meta byline"><span class="meta-prep meta-prep-author">av </span><span class="author vcard"><?php the_author_link(); ?></span>, <span class="entry-date"><?php the_date('l d. M Y'); ?> kl <?php the_time('G.i'); ?></span></div>
+					<div class="entry-meta byline"><span class="meta-prep meta-prep-author">av </span><span class="author vcard"><?php the_author_link(); ?></span>, <span class="entry-date"><?php the_date('l d. M Y'); ?> kl <?php the_time('H.i'); ?></span></div>
 
 					<div class="entry-content"><?php the_excerpt(); ?></div> <!-- .entry-content -->
 
