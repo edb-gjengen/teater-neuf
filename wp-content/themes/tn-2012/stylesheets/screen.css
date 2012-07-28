@@ -516,6 +516,13 @@ body #content .post {
   overflow: hidden;
   *zoom: 1;
 }
+body #content #posts-nav-link {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1180px;
+}
 body #site-footer {
   background-color: #7650b3;
   min-width: 100%;

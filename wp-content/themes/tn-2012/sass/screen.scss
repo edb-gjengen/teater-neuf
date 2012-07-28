@@ -400,6 +400,9 @@ body {
 			@include clearfix();
 
 		}
+		#posts-nav-link {
+			@include grid(12);
+		}
     }
     #site-footer {
         background-color: $main-color;

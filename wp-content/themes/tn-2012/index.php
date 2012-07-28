@@ -27,8 +27,9 @@
 
 		<?php endwhile; endif; ?>
 
-
-<?php posts_nav_link(); ?>
+	<div id="posts-nav-link">
+		<?php posts_nav_link(); ?>
+	</div>
 
 </div> <!-- #content -->
 
