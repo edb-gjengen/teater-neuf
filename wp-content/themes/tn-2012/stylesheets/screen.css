@@ -169,11 +169,38 @@ body #site-header #header-container #menu ul, body #site-header #header-containe
   padding: 0px;
   display: inline;
 }
-body #site-header #header-container #menu ul li {
-  border-right: 1px solid #FFFFE1;
-  padding: 6px;
+body #site-header #header-container #menu ul ul {
+  position: absolute;
+  display: none;
+  margin: 0;
 }
-body #site-header #header-container #menu ul li.social-icon {
+body #site-header #header-container #menu ul li {
+  float: left;
+}
+body #site-header #header-container #menu ul li:hover ul, body #site-header #header-container #menu ul li:focus ul {
+  display: block;
+  z-index: 9;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+}
+body #site-header #header-container #menu ul li a {
+  display: block;
+  height: 22px;
+  padding: 0px 7px 7px;
+  text-decoration: none;
+  border-right: 1px solid #FFFFE1;
+}
+body #site-header #header-container #menu ul li a:hover, body #site-header #header-container #menu ul li a .current {
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+}
+body #site-header #header-container #menu ul li .sub-menu li {
+  position: relative;
+}
+body #site-header #header-container #menu ul li .sub-menu li a {
+  border: 0px;
+}
+body #site-header #header-container #menu ul li.social-icon a {
   border: 0px;
 }
 body #site-header #header-container #menu ul li.social-icon #facebook-icon {

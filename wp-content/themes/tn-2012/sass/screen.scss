@@ -110,12 +110,46 @@ body {
                 ul {
                     @include inline-list;
 
+                    ul {
+                        position: absolute;
+                        display: none;
+                        margin: 0;
+                    }
+
                     li {
-                        border-right: 1px solid #FFFFE1;
-                        padding: 6px;
+                        float: left;
+
+                        &:hover ul, &:focus ul {
+                            display:block;
+                            z-index:9;
+                            color:rgba(255,255,255,1);
+                            background:rgba(0,0,0,0.3);
+                        }
+
+                        a {
+                            display: block;
+                            height: 22px;
+                            padding: 0px 7px 7px;
+                            text-decoration: none;
+                            border-right: 1px solid #FFFFE1;
+
+                            &:hover, .current  {
+                                color:rgba(255,255,255,1);
+                                background:rgba(0,0,0,0.3);
+                            }
+                        }
+
+                        .sub-menu li {
+                            position: relative;
+                            a {
+                                border: 0px;
+                            }
+                        }
 
                         &.social-icon {
-                            border: 0px;
+                            a {
+                                border: 0px;
+                            }
 
                             #facebook-icon {
                                 padding-left: 6px;
