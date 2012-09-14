@@ -176,12 +176,13 @@ body #site-header #header-container #menu ul ul {
 }
 body #site-header #header-container #menu ul li {
   float: left;
+  position: relative;
 }
 body #site-header #header-container #menu ul li:hover ul, body #site-header #header-container #menu ul li:focus ul {
   display: block;
   z-index: 9;
   color: white;
-  background: rgba(0, 0, 0, 0.3);
+  background: #5e3f91;
 }
 body #site-header #header-container #menu ul li a {
   display: block;
@@ -189,10 +190,11 @@ body #site-header #header-container #menu ul li a {
   padding: 0px 7px 7px;
   text-decoration: none;
   border-right: 1px solid #FFFFE1;
+  position: relative;
 }
 body #site-header #header-container #menu ul li a:hover, body #site-header #header-container #menu ul li a .current {
   color: white;
-  background: rgba(0, 0, 0, 0.3);
+  background: #5e3f91;
 }
 body #site-header #header-container #menu ul li .sub-menu li {
   position: relative;

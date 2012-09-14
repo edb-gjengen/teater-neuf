@@ -118,12 +118,13 @@ body {
 
                     li {
                         float: left;
+                        position: relative;
 
                         &:hover ul, &:focus ul {
                             display:block;
                             z-index:9;
                             color:rgba(255,255,255,1);
-                            background:rgba(0,0,0,0.3);
+                            background:darken($main-color, 10%);
                         }
 
                         a {
@@ -132,10 +133,11 @@ body {
                             padding: 0px 7px 7px;
                             text-decoration: none;
                             border-right: 1px solid #FFFFE1;
+                            position: relative;
 
                             &:hover, .current  {
                                 color:rgba(255,255,255,1);
-                                background:rgba(0,0,0,0.3);
+                                background:darken($main-color, 10%);
                             }
                         }
 
