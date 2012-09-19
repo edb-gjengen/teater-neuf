@@ -77,7 +77,6 @@ body {
 
         #header-container {
             @include grid_container;
-            @include clearfix;
 
             .site-title {
                 @include grid(6);
@@ -122,7 +121,7 @@ body {
 
                         &:hover ul, &:focus ul {
                             display:block;
-                            z-index:9;
+                            z-index: 9;
                             color:rgba(255,255,255,1);
                             background:darken($main-color, 10%);
                         }
