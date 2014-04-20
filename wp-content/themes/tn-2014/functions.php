@@ -5,11 +5,8 @@ add_theme_support( 'automatic-feed-links' );
 
 $content_width = 770;
 
-add_image_size( 'two-column-thumb'  , 170 ,  69 , true );
-add_image_size( 'four-column-thumb' , 370 , 150 , true );
 add_image_size( 'six-column-promo' , 570 , 322 , true );
 add_image_size( 'six-column-slim' , 570 , 161 , true );
-add_image_size( 'association-thumb' , 270 , 250, false );
 
 /**
  * Register navigation menus.
@@ -183,41 +180,6 @@ function neuf_doctitle() {
 	echo $doctitle;
 } // end neuf_doctitle
 
-/**
- * Should return true if the file displaying the current page is defined as part of the given section.
- *
- * @todo Do we need this in a WordPress theme? misund 2012-12-18
- */
-function is_in_section($section) {
-	switch ($section) {
-	case 'program':
-		if ( in_array(get_requested_file(),array('prog','konsepter','konsept','booking','vis')) )
-			return true;
-		break;
-	case 'foreninger':
-		if ( in_array(get_requested_file(),array('foreninger')) )
-			return true;
-		break;
-	case 'forum':
-		if ( substr($_SERVER['REQUEST_URI'],1,5) == 'forum' )
-			return true;
-		break;
-	case 'inside':
-		if ( substr($_SERVER['REQUEST_URI'],1,6) == 'inside' || in_array(get_requested_file(),array('aktive')) )
-			return true;
-		break;
-	case 'nyheter':
-		if ( in_array(get_requested_file(),array('nyheter','nyhet')) )
-			return true;
-		break;
-	case 'forside':
-		if ( !( is_in_section('program') || is_in_section('foreninger') || is_in_section('medlem') || is_in_section('forum') || is_in_section('inside') || is_in_section('nyheter') ) )
-			return true;
-		break;
-	default:
-		return false;
-	}
-}
 
 
 /**
@@ -267,24 +229,6 @@ function neuf_get_attachment_count() {
 function neuf_maybe_display_gallery() {
 	if ( 2 < neuf_get_attachment_count() )
 		echo do_shortcode( '[gallery]' );
-}
-
-function neuf_event_format_date($timestamp) {
-	return date_i18n('d/n', intval($timestamp));
-}
-
-/**
- * Takes 2 date strings in $format.
- * 
- * Returns the difference in days * 2, for use in
- * a grid based layout on the program page.
- */
-function neuf_event_day_gap_size($current_day,$previous_day) {
-	$format = '%Y-%m-%d';
-	$prev = new DateTime($previous_day);
-	$cur = new DateTime($current_day);
-	$diff = $prev->diff($cur)->d;
-	return ($diff - 1) * 2;
 }
 
 /**

@@ -1,20 +1,28 @@
 
 <footer id="site-footer">
 	<div id="footer-container">
-        <div id="footer-about" class="grid_4 alpha">
+        <div id="footer-about">
             <h2><a href="om-oss/" class="black">Teater Neuf</a></h2>
-			<p>Teater Neuf - Studentteatret i Oslo er Norges eldste studentteater, og ønsker å tilby studentene både kunstnerisk utvikling og lavterskelmoro ved siden av pensum. Vi holder til på Det Norske Studentersamfund og har i tillegg til fire forestillinger per semester og én storproduksjon i året, også ukentlige aktiviteter, workshops, interne fester og mer. Teater Neuf er et prosjektbasert teater, noe som vil si at vi ikke har en fast gruppe skuespillere, regissører, scenografer o.l, men er åpne for hvem som helst å bli med og å komme med prosjektbeskrivelser til nye forestillinger eller annet på teateret. Klikk deg videre på sidene våre for å registrere deg og for å lese mer om Teateret og hva som skjer!</p>
+            <!-- TODO: Move to Theme -> Customize -->
+            <p>Teater Neuf - Studentteatret i Oslo er <em>Norges eldste studentteater</em>, tilbyr studenter både kunstnerisk utvikling og lavterskelmoro ved siden av pensum.
+            Vi holder til på Det Norske Studentersamfund og har i tillegg til fire forestillinger per semester og én storproduksjon i året, også ukentlige aktiviteter, workshops, interne fester og mer.</p>
+            <ul>
+                <li class="social-icon"><a id="facebook-icon" href="http://facebook.com/teaterneuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/facebook.png" /></a></li>
+                <li class="social-icon"><a id="twitter-icon" href="http://twitter.com/teater_neuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/twitter.png" /></a></li>
+            </ul>
         </div> <!-- #footer-about -->
     </div>
 
-	<div id="kolofon" class="grid_12">
-        <div id="kolofon-text">Teater Neuf, Det Norske Studentersamfund | Slemdalsveien 15, 0369 Oslo | Webdesign av <a href="http://edb.neuf.no">EDB-gjengen</a> og Designerne i <a href="http://studentersamfundet.no/association/kommunikasjonsavdelingen/">KAK</a>.</div>
+	<div id="kolofon">
+        <div id="kolofon-text">Teater Neuf, <a href="http://studentersamfundet.no">Det Norske Studentersamfund</a>
+        </div>
 	</div> <!-- #kolofon -->
 
-	<!-- Google Analytics -->
-	<!-- end Google Analytics -->
 	</div>
 </footer> <!-- #site-footer -->
+<div class="credits-wrap">
+    <div class="credits">Laget med <span class="love" title="kærlighed">♥</span> av <a href="http://kak.studentersamfundet.no/" title="Kommunikasjonsavdelingen">KAK</a></div>
+</div>
 
 <?php wp_footer(); ?>
 
