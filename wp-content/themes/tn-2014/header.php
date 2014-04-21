@@ -9,7 +9,7 @@
     <link rel="alternate" type="application/rss+xml" href="http://studentersamfundet.no/syndikering/kommende-program/" title="Det Norske Studentersamfund (kommende program)" />
 
     <link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style.css" rel="stylesheet" type="text/css" />
-    <link href='//fonts.googleapis.com/css?family=Arvo:700,400italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,800,600' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
     <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/bower_components/momentjs/moment.js"></script>
