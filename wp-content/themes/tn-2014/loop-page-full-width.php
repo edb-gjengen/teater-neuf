@@ -2,17 +2,13 @@
 
 			<div <?php neuf_post_class(); ?>>
 
-				<div class="grid_12">
+				<div class="full-width">
 
 					<h1 class="entry-title"><?php the_title(); ?></h1>
-
 					<div class="entry-content"><?php the_content(); ?></div> <!-- .entry-content -->
-
 					<?php display_social_sharing_buttons(); ?>
 
 				</div>
-
-				<?php neuf_maybe_display_gallery(); ?>
 
 			</div> <!-- .hentry -->
 

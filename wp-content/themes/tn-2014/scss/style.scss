@@ -1,9 +1,7 @@
 @import './bower_components/foundation/scss/normalize';
-// TODO
-// - colors
 
-@import "settings";
 // Foundation overrides
+//@import "settings"; // Look in _settings.scss for what you can override
 //$row-width: rem-calc(1440);
 $primary-color: #650A15;
 $secondary-color: #404040;
@@ -145,11 +143,28 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 480px;
+    height: 400px;
     margin-bottom: rem-calc(20);
+    position: relative;
+
+    .title-wrap {
+        @include grid-row();
+    }
+    .entry-title {
+        @include grid-column(12);
+        position: absolute;
+        bottom: 0;
+        font-size: rem-calc(70);
+        font-weight: bold;
+        color: white;
+    }
+}
+.home #cover-photo {
+    height: 480px;
 }
 #content {
     @include grid-row();
+    padding-bottom: rem-calc(20);
 
     .program-upcoming {
         @include grid-column(12);
@@ -193,7 +208,7 @@ body {
             }
             .entry-meta {
                 font-size: 12px;
-                line-height: 1.6;
+                line-height: 2;
                 padding-bottom: 10px;
             }
             .entry-summary {
@@ -201,31 +216,22 @@ body {
             }
         }
     }
-    /* Single pages */
+}
+/* Single posts */
+.single-post,
+.type-page {
     .body {
-        @include grid-column(6);
+        @include grid-column(7);
         margin-bottom: rem-calc(25);
+    }
+    /* TODO sidebar */
+
+    .entry-title {
+        @include grid-column(12);
         margin-top: rem-calc(25);
     }
-
-    .featured-image {
-        @include grid-column(6);
-    }
-
-    .hentry {
-    }
-    #social-sharing {
-        margin-top: 10px;
-
-        .share-twitter {
-            display: inline-block;
-        }
-        .share-facebook {
-            display: inline-block;
-            position: relative;
-            bottom: 3px;
-        }
-
+    .entry-title {
+        line-height: 1.1;
     }
     .byline {
         color: $secondary-color;
@@ -236,7 +242,7 @@ body {
         }
     }
     .entry-content {
-        margin-top: 15px;
+        margin-top: rem-calc(30);
     }
     .text-body {
         @include grid-column(6);
@@ -251,11 +257,28 @@ body {
     .page-title {
         margin-left: 10px;
     }
-    #posts-nav-link {
-        @include grid-column(12);
+    .wp-post-image {
+        margin-top: 10px;
     }
 
 }
+#social-sharing {
+    margin-top: 10px;
+
+    .share-twitter {
+        display: inline-block;
+    }
+    .share-facebook {
+        display: inline-block;
+        position: relative;
+        bottom: 3px;
+    }
+
+}
+#posts-nav-link {
+    @include grid-column(12);
+}
+
 #site-footer {
     $footer-color: #fff;
 

@@ -1,25 +1,21 @@
-		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+    <?php get_template_part( 'cover' ); ?>
+    <div id="content">
+        <article <?php neuf_post_class(); ?>>
+            <?php if( !has_post_thumbnail() ) { ?>
+                <!-- Overlayed over post thumbnail if it exists -->
+                <h1 class="entry-title"><?php the_title(); ?></h1>
+            <?php } ?>
+            
+            <div class="body">
+                <div class="entry-content"><?php the_content(); ?></div> <!-- .entry-content -->
+                <?php display_social_sharing_buttons(); ?>
+            </div>
 
-			<article <?php neuf_post_class(); ?>>
+            <div class="featured-image">
+            </div>
 
-				<div class="body grid_6">
+        </article> <!-- .hentry -->
 
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-
-					<div class="entry-content"><?php the_content(); ?></div> <!-- .entry-content -->
-
-					<?php display_social_sharing_buttons(); ?>
-
-				</div>
-
-				<div class="featured-image grid_6">
-
-					<?php the_post_thumbnail( 'large' , array( 'style' => 'display:block;margin:auto;' ) ); ?>
-
-				</div>
-
-				<?php neuf_maybe_display_gallery(); ?>
-
-			</article> <!-- .hentry -->
-
-		<?php endwhile; endif; ?>
+    </div>
+<?php endwhile; endif; ?>
