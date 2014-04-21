@@ -61,28 +61,28 @@ body {
 
 #site-header {
     background-color: $primary-color;
+}
 
-    #header-container {
-        @include grid-row();
+#header-container {
+    @include grid-row();
 
-        .site-title {
-            @include grid-column(4);
+    .site-title {
+        @include grid-column(4);
 
-            .logo {
-                background: url('../img/teater_neuf_logo.png') no-repeat;
-                background-size: contain;
-                display: inline-block;
-                width: 92px;
-                height: 44px;
-                text-indent: -9999px;
-                position: relative;
-                margin-top: 12px;
-            }
+        .logo {
+            background: url('../img/teater_neuf_logo.png') no-repeat;
+            background-size: contain;
+            display: inline-block;
+            width: 92px;
+            height: 44px;
+            text-indent: -9999px;
+            position: relative;
+            margin-top: 12px;
         }
     }
 }
 #menu {
-    @include grid-column(6, $offset: 2);
+    @include grid-column(7, $offset: 1);
     position: relative;
     text-transform: uppercase;
 
