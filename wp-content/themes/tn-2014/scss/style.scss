@@ -104,7 +104,7 @@ body {
         margin: 0px;
         padding: 0px;
         display: block;
-        float: right;
+        float: left;
         position: relative;
 
         &:hover ul, &:focus ul {
@@ -133,7 +133,6 @@ body {
             left: 20px;
             li {
                 position: relative;
-                float:left;
 
                 a {
                     padding: 18px 18px;
