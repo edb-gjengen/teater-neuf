@@ -243,6 +243,11 @@ body {
         ul.program-list {
             @include block-grid(4);
         }
+        .program-more-link {
+            float: right;
+            font-size: rem-calc(12);
+            color: $secondary-color;
+        }
     }
     #digest-news {
         margin-bottom: rem-calc(20);
@@ -300,7 +305,7 @@ body {
 
     }
     .byline {
-        color: #aaa;
+        color: $secondary-color;
 
         .author {
             color: #000;
