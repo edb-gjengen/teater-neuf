@@ -181,10 +181,11 @@ body {
         .news-entry {
             @include grid-column(4);
             img.button {
-                width: 50px;
+                width: 24px;
                 height: auto;
                 float: left;
                 margin-right: 4px;
+                margin-bottom: 28px;
             }
             a.entry-title{
                 font-size: rem-calc(24);
