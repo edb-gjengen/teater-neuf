@@ -12,7 +12,7 @@ var query_params = {
     custom_fields: custom_fields.join()
 };
 
-var list = '<% _.each(posts, function(post) { %> <li><a href="<%= post.url %>"><div><img src="<%= post.thumbnail_images["four-column-thumb"].url %>" /><br/><%= moment.unix(post.custom_fields._neuf_events_starttime).utc().format("YYYY-MM-DD HH:mm") %><br/> <%= post.title %> (<%= post.custom_fields._neuf_events_price_regular %>/<%= post.custom_fields._neuf_events_price_member %>)</div></a></li> <% }); %>';
+var list = '<% _.each(posts, function(post) { %> <li><a href="<%= post.url %>"><div><img src="<%= post.thumbnail_images["four-column-thumb"].url %>" /><br/><span class="entry-starttime"><%= moment.unix(post.custom_fields._neuf_events_starttime).utc().format("YYYY-MM-DD HH:mm") %></span><br/> <%= post.title %> (<%= post.custom_fields._neuf_events_price_regular %>/<%= post.custom_fields._neuf_events_price_member %>)</div></a></li> <% }); %>';
 jQuery(document).ready(function() {
     var $ = jQuery;
     $.getJSON(

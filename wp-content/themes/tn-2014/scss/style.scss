@@ -150,91 +150,7 @@ body {
 }
 #content {
     @include grid-row();
-    //#featured {
-    //    @include grid-column(12);
-    //    padding-bottom: 25px;
 
-    //    #prevLink {
-    //        display: inline-block;
-    //        width: 0;
-    //        height: 0;
-    //        border-top: 8px solid transparent;
-    //        border-bottom: 8px solid transparent;
-    //        border-right: 16px solid $primary-color;
-    //        cursor: pointer;
-
-    //        &:hover {
-    //            border-right: 16px solid lighten($primary-color, 20%);
-    //        }
-    //    }
-    //    #nextLink {
-    //        display: inline-block;
-    //        width: 0;
-    //        height: 0;
-    //        border-top: 8px solid transparent;
-    //        border-bottom: 8px solid transparent;
-    //        border-left: 16px solid $primary-color;
-    //        cursor: pointer;
-
-    //        &:hover {
-    //            border-left: 16px solid lighten($primary-color, 20%);
-    //        }
-    //    }
-    //    #slidernav {
-    //        display: inline-block;
-    //        a {
-    //            content: '';
-    //            background: lighten($primary-color, 20%);
-    //            border-radius: 50%;
-    //            width: 16px;
-    //            height: 16px;
-    //            display: inline-block;
-    //            z-index: 10;
-    //            margin-left: 4px;
-    //            margin-right: 4px;
-
-    //            &.activeSlide {
-    //                background: $primary-color;
-
-    //            }
-    //        }
-    //    }
-    //    #slider-buttons {
-    //        position: relative;
-    //        top: 350px;
-    //        z-index: 10;
-    //    }
-
-    //    #slider {
-    //        .featured-text {
-    //            @include grid-column(6);
-    //            height: 328px;
-
-    //            .entry-meta {
-    //                position: absolute;
-    //                bottom: 6px;
-    //                color: #fff;
-    //                background: darken(#fff, 40%);
-    //                padding: 4px;
-
-    //                .datetime {
-    //                    @include grid-column(2);
-    //                }
-    //                .venue {
-    //                    @include grid-column(2);
-    //                }
-    //                .price {
-    //                    @include grid-column(2);
-    //                }
-    //            }
-    //        }
-    //    
-    //        .featured-image {
-    //            @include grid-column(6);
-    //        }
-
-    //    }
-    //}
     .program-upcoming {
         @include grid-column(12);
         margin-top: rem-calc(20);
@@ -242,6 +158,11 @@ body {
 
         ul.program-list {
             @include block-grid(4);
+
+        }
+        .entry-starttime {
+            font-size: rem-calc(12);
+            color: $secondary-color;
         }
         .program-more-link {
             float: right;
@@ -260,10 +181,10 @@ body {
         .news-entry {
             @include grid-column(4);
             img.button {
-                width: 32px;
+                width: 50px;
                 height: auto;
-                position: relative;
-                top: -4px;
+                float: left;
+                margin-right: 4px;
             }
             a.entry-title{
                 font-size: rem-calc(24);
@@ -271,10 +192,11 @@ body {
             }
             .entry-meta {
                 font-size: 12px;
-                line-height: 1em;
+                line-height: 1.6;
                 padding-bottom: 10px;
-                padding-top: 4px;
-
+            }
+            .entry-summary {
+                line-height: 1.4;
             }
         }
     }
