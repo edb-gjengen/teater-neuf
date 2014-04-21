@@ -1,24 +1,20 @@
-		<div id="digest-news" class="grid_12 hfeed">
+		<div id="digest-news" class="hfeed">
 
-			<h2><a href="<?php bloginfo('url'); ?>/nyheter/">Nyheter</a></h2>
+			<h3><a href="<?php bloginfo('url'); ?>/nyheter/">Siste nyheter</a></h3>
 
 				<?php // The LOOP
 					$digest_news = new WP_Query( 'posts_per_page=3' );
-					$counter = 1;
 					if ( $digest_news->have_posts() ) : while ( $digest_news->have_posts() ) : $digest_news->the_post();
 				?>
-                    <div class="news-entry grid_4<?php
-                    if($counter == 1) { echo " alpha"; }
-                    elseif($counter == 3) { echo" omega"; }
-                    ?>">
+                    <div class="news-entry">
 					<article id="post-<?php the_ID(); ?>" <?php neuf_post_class(); ?>>
-						<a class="permalink" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+                        <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/knapp.png" class="button" />
+						<a class="permalink entry-title" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 						<div class="entry-meta byline"><span class="entry-date"><?php the_time(get_option('date_format')); ?>, <?php the_time('H.i'); ?></span></div>
 						<div class="entry-summary"><?php echo linkify(trim_excerpt(get_the_excerpt(), 30), '/\[\.\.\.\]/', get_permalink()); ?></div>
                     </article>
                 </div>
 					<?php
-					$counter++;
 					endwhile;
 					?>
 			<?php endif; ?>

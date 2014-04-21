@@ -7,14 +7,14 @@
             <p>Teater Neuf - Studentteatret i Oslo er <em>Norges eldste studentteater</em>, tilbyr studenter både kunstnerisk utvikling og lavterskelmoro ved siden av pensum.
             Vi holder til på Det Norske Studentersamfund og har i tillegg til fire forestillinger per semester og én storproduksjon i året, også ukentlige aktiviteter, workshops, interne fester og mer.</p>
             <ul>
-                <li class="social-icon"><a id="facebook-icon" href="http://facebook.com/teaterneuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/facebook.png" /></a></li>
-                <li class="social-icon"><a id="twitter-icon" href="http://twitter.com/teater_neuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/twitter.png" /></a></li>
+                <li class="social-icon"><a id="facebook-icon" href="http://facebook.com/teaterneuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/facebook.png" />Besøk oss på Facebook</a></li>
+                <li class="social-icon"><a id="twitter-icon" href="http://twitter.com/teater_neuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/twitter.png" />eller følg oss Twitter</a>.</li>
             </ul>
         </div> <!-- #footer-about -->
     </div>
 
 	<div id="kolofon">
-        <div id="kolofon-text">Teater Neuf, <a href="http://studentersamfundet.no">Det Norske Studentersamfund</a>
+        <div id="kolofon-text">Teater Neuf, en del av <a href="http://studentersamfundet.no">Det Norske Studentersamfund</a>
         </div>
 	</div> <!-- #kolofon -->
 

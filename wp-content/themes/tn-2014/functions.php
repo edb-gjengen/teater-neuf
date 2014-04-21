@@ -5,6 +5,7 @@ add_theme_support( 'automatic-feed-links' );
 
 $content_width = 770;
 
+add_image_size( 'cover-photo' , 1440, 480, true );
 add_image_size( 'six-column-promo' , 570 , 322 , true );
 add_image_size( 'six-column-slim' , 570 , 161 , true );
 
@@ -24,6 +25,8 @@ add_action( 'init' , 'neuf_register_nav_menus' );
 function neuf_enqueue_scripts() {
 	// enqueue the scripts
 	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'underscore' );
+
 }
 add_action( 'wp_enqueue_scripts' , 'neuf_enqueue_scripts' );
 

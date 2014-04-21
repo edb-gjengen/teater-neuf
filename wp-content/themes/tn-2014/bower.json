@@ -2,7 +2,7 @@
   "name": "tn2014",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "underscore": "latest"
+    "underscore": "latest",
+    "momentjs": "~2.6.0"
   }
 }
-
