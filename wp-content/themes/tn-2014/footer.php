@@ -14,7 +14,7 @@
     </div>
 
 	<div id="kolofon">
-        <div id="kolofon-text">Teater Neuf, en del av <a href="http://studentersamfundet.no">Det Norske Studentersamfund</a>
+        <div id="kolofon-text">Teater Neuf er en del av <a href="http://studentersamfundet.no">Det Norske Studentersamfund</a>
         </div>
 	</div> <!-- #kolofon -->
 

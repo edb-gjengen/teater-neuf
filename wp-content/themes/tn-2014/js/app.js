@@ -1,15 +1,6 @@
-var program_endpoint = "https://studentersamfundet.no/api/get_type_event/";
-var custom_fields = [
-    "_neuf_events_starttime",
-    "_neuf_events_endtime",
-    "_neuf_events_price_regular",
-    "_neuf_events_price_member"];
+var program_endpoint = "https://studentersamfundet.no/api/events/get_upcoming/";
 var query_params = {
-    json: '1',
-    post_type: 'event',
-    type: 'teater', // TODO not implemented
-    order_by: '_neuf_events_starttime',
-    custom_fields: custom_fields.join()
+    event_type: 'teater'
 };
 
 function format_posts(posts) {
@@ -24,7 +15,7 @@ function format_posts(posts) {
             html += '<img src="'+ stylesheet_dir +'/img/placeholder.gif" /><br/>';
         }
         html += '<span class="entry-starttime">'+ moment.unix(post.custom_fields._neuf_events_starttime).utc().format("YYYY-MM-DD HH:mm") +'</span><br/>';
-        html += post.title +'('+ post.custom_fields._neuf_events_price_regular +')/'+ post.custom_fields._neuf_events_price_member +')</div></a></li>';
+        html += post.title +'</div></a></li>';
     }
     return html;
 }
@@ -35,10 +26,10 @@ jQuery(document).ready(function() {
         program_endpoint+"?callback=?",
         query_params,
         function(data) {
-            if(data && data.posts) {
+            if(data && data.events) {
                 console.log(data);
                 // render template
-                var html = format_posts(data.posts.slice(0, 4));
+                var html = format_posts(data.events.slice(0, 4));
                 $(".program-upcoming ul.program-list").html(html);
             }
         }
