@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8" />
     <meta name="robots" content="index,follow" />
+    <meta name="x-stylesheet-directory" content="<?php bloginfo( 'stylesheet_directory' ); ?>" />
     <?php neuf_doctitle(); ?>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('url'); ?>/feed/" title="Det Norske Studentersamfund (nyheter)" />
