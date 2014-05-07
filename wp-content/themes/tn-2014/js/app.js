@@ -14,20 +14,22 @@ function format_posts(posts) {
             var stylesheet_dir = jQuery("meta[name=x-stylesheet-directory]").attr('content');
             html += '<img src="'+ stylesheet_dir +'/img/placeholder.gif" /><br/>';
         }
-        html += '<span class="entry-starttime">'+ moment.unix(post.custom_fields._neuf_events_starttime).utc().format("YYYY-MM-DD HH:mm") +'</span><br/>';
-        html += post.title +'</div></a></li>';
+        html += '<span class="entry-starttime">'+ moment.unix(post.custom_fields._neuf_events_starttime).utc().format("DD. MMMM YYYY, HH.mm") +'</span><br/>';
+        html += '<span class="entry-title">'+ post.title +'</span></div></a></li>';
     }
     return html;
 }
 
 jQuery(document).ready(function() {
+    moment.lang("nb");
+
     var $ = jQuery;
     $.getJSON(
         program_endpoint+"?callback=?",
         query_params,
         function(data) {
             if(data && data.events) {
-                console.log(data);
+                //console.log(data);
                 // render template
                 var html = format_posts(data.events.slice(0, 4));
                 $(".program-upcoming ul.program-list").html(html);

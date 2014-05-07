@@ -14,6 +14,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,800,600' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
     <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/bower_components/momentjs/moment.js"></script>
+    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/bower_components/momentjs/lang/nb.js"></script>
     <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/app.js"></script>
 
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->

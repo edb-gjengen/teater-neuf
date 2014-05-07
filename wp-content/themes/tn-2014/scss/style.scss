@@ -175,6 +175,12 @@ body {
         ul.program-list {
             @include block-grid(4);
 
+            .entry-title {
+                font-size: rem-calc(20);
+                font-weight: bold;
+                line-height: 1.1;
+            }
+
         }
         .entry-starttime {
             font-size: rem-calc(12);

@@ -5,7 +5,7 @@
 
 				<div class="body">
 
-                    <div class="entry-meta byline"><span class="meta-prep meta-prep-author">av </span><span class="author vcard"><?php the_author_link(); ?></span>, <span class="entry-date"><?php the_date('l d. M Y'); ?> kl <?php the_time('H.i'); ?></span></div>
+                    <div class="entry-meta byline"><span class="meta-prep meta-prep-author">av </span><span class="author vcard"><?php the_author_link(); ?></span>, <span class="entry-date"><?php echo date_i18n( get_option('date_format')).", ".date_i18n( get_option('time_format')); ?></span></div>
 					<?php the_post_thumbnail( 'single' ); ?>
 					<div class="entry-content"><?php the_content(); ?></div> <!-- .entry-content -->
 
