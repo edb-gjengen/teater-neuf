@@ -5,6 +5,9 @@ var query_params = {
 
 function format_posts(posts) {
     var html = '';
+    if(posts.length === 0) {
+        html = '<p>Ingen planlagte arrangementer :\'(<p>';
+    }
     for(var i=0; i< posts.length; i++) {
         var post = posts[i];
         html += '<li><a href="'+ post.url +'"><div>';
