@@ -5,9 +5,11 @@ var query_params = {
 
 function format_posts(posts) {
     var html = '';
+    posts = [];
     if(posts.length === 0) {
-        html = '<p>Ingen planlagte arrangementer :\'(<p>';
+        return '<p class="no-posts">Finner ingen fremtidige, men se gjerne hva vi har <a href="https://studentersamfundet.no/konsept/teater/#past">arrangert tidligere</a>.</p>';
     }
+    html += '<ul class="program-list">';
     for(var i=0; i< posts.length; i++) {
         var post = posts[i];
         html += '<li><a href="'+ post.url +'"><div>';
@@ -20,6 +22,7 @@ function format_posts(posts) {
         html += '<span class="entry-starttime">'+ moment.unix(post.custom_fields._neuf_events_starttime).utc().format("DD. MMMM YYYY, HH.mm") +'</span><br/>';
         html += '<span class="entry-title">'+ post.title +'</span></div></a></li>';
     }
+    html += '</ul>';
     return html;
 }
 
@@ -35,7 +38,7 @@ jQuery(document).ready(function() {
                 //console.log(data);
                 // render template
                 var html = format_posts(data.events.slice(0, 4));
-                $(".program-upcoming ul.program-list").html(html);
+                $(".program-upcoming .program-list-wrap").html(html);
             }
         }
     );

@@ -4,6 +4,7 @@
         <div id="footer-about">
             <h2><a href="om-oss/" class="black">Teater Neuf</a></h2>
             <!-- TODO: Move to Theme -> Customize -->
+            <a href="https://viteboka.studentersamfundet.no/Den_Hvide_Knap"><img class="knapp-hvit" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/knapp_hvit.png" /></a>
             <p>Teater Neuf - Studentteatret i Oslo er <em>Norges eldste studentteater</em>, tilbyr studenter både kunstnerisk utvikling og lavterskelmoro ved siden av pensum.
             Vi holder til på Det Norske Studentersamfund og har i tillegg til fire forestillinger per semester og én storproduksjon i året, også ukentlige aktiviteter, workshops, interne fester og mer.</p>
             <ul>
