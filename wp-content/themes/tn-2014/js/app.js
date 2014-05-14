@@ -5,10 +5,11 @@ var query_params = {
 
 function format_posts(posts) {
     var html = '';
-    posts = [];
+
     if(posts.length === 0) {
         return '<p class="no-posts">Finner ingen fremtidige, men se gjerne hva vi har <a href="https://studentersamfundet.no/konsept/teater/#past">arrangert tidligere</a>.</p>';
     }
+
     html += '<ul class="program-list">';
     for(var i=0; i< posts.length; i++) {
         var post = posts[i];
@@ -23,6 +24,7 @@ function format_posts(posts) {
         html += '<span class="entry-title">'+ post.title +'</span></div></a></li>';
     }
     html += '</ul>';
+
     return html;
 }
 
