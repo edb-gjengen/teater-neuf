@@ -370,4 +370,40 @@ function neuf_get_term_name() {
 	return $term->name;
 }
 
+/* Customize theme options
+ * Ref: http://ottopress.com/2012/making-a-custom-control-for-the-theme-customizer/
+ */
+if (class_exists('WP_Customize_Control')) {
+    class Customize_Textarea_Control extends WP_Customize_Control {
+        public $type = 'textarea';
+
+        public function render_content() {
+            ?>
+            <label>
+            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+            <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+            </label>
+            <?php
+        }
+    }
+}
+
+function neuf_customize_register( $wp_customize ) {
+    /* Footer text */
+    $wp_customize->add_section( 'neuf_footer_section' , array(
+        'title'      => __( 'Footer (about)', 'neuf-web' ),
+        'priority'   => 30,
+    ) );
+    $wp_customize->add_setting( 'footer_about_text' , array(
+        'default'     => '',
+    ) );
+    $wp_customize->add_control(
+        new Customize_Textarea_Control( $wp_customize, 'footer_about_text', array(
+            'label'    => __( 'About text', 'neuf-web' ),
+            'section'  => 'neuf_footer_section',
+            'settings' => 'footer_about_text',
+        ) )
+    );
+}
+add_action( 'customize_register', 'neuf_customize_register' );
 ?>

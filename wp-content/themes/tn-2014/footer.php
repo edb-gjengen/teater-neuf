@@ -1,12 +1,11 @@
-
+<?php $footer_about_text = get_theme_mod( 'footer_about_text',""); ?>
 <footer id="site-footer">
 	<div id="footer-container">
         <div id="footer-about">
             <h2><a href="om-oss/" class="black">Teater Neuf</a></h2>
             <!-- TODO: Move to Theme -> Customize -->
             <a href="https://viteboka.studentersamfundet.no/Den_Hvide_Knap"><img class="knapp-hvit" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/knapp_hvit.png" /></a>
-            <p>Teater Neuf - Studentteatret i Oslo er <em>Norges eldste studentteater</em>, tilbyr studenter både kunstnerisk utvikling og lavterskelmoro ved siden av pensum.
-            Vi holder til på Det Norske Studentersamfund og har i tillegg til fire forestillinger per semester og én storproduksjon i året, også ukentlige aktiviteter, workshops, interne fester og mer.</p>
+            <p><?php echo $footer_about_text; ?></p>
             <ul>
                 <li class="social-icon"><a id="facebook-icon" href="http://facebook.com/teaterneuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/facebook.png" />Besøk oss på Facebook</a></li>
                 <li class="social-icon"><a id="twitter-icon" href="http://twitter.com/teater_neuf" target="_blank"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/twitter.png" />eller følg oss Twitter</a>.</li>
