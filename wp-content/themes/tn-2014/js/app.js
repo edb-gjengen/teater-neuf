@@ -7,10 +7,10 @@ function format_posts(posts) {
     var html = '';
 
     if(posts.length === 0) {
-        return '<p class="no-posts">Finner ingen fremtidige, men se gjerne hva vi har <a href="https://studentersamfundet.no/konsept/teater/#past">arrangert tidligere</a>.</p>';
+        return '<p class="no-posts fadein">Finner ingen fremtidige, men se gjerne hva vi har <a href="https://studentersamfundet.no/konsept/teater/#past">arrangert tidligere</a>.</p>';
     }
 
-    html += '<ul class="program-list">';
+    html += '<ul class="program-list fadein">';
     for(var i=0; i< posts.length; i++) {
         var post = posts[i];
         html += '<li><a href="'+ post.url +'"><div>';
@@ -44,4 +44,13 @@ jQuery(document).ready(function() {
             }
         }
     );
+
+    /* Menu toggle */
+    $("#menu [data-toggle-menu]").on('click', function(e) {
+        e.preventDefault();
+        // add open css class
+        var menu = $("#menu .main-menu");
+        menu.toggleClass("visible");
+    });
+
 });

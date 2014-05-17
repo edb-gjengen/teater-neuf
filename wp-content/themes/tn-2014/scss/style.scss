@@ -65,7 +65,7 @@ body {
     @include grid-row();
 
     .site-title {
-        @include grid-column(4);
+        @include grid-column(3);
 
         .logo {
             background: url('../img/teater_neuf_logo.png') no-repeat;
@@ -80,7 +80,7 @@ body {
     }
 }
 #menu {
-    @include grid-column(7, $offset: 1);
+    @include grid-column(9);
     position: relative;
     text-transform: uppercase;
 
@@ -102,14 +102,20 @@ body {
         margin: 0px;
         padding: 0px;
         display: block;
-        float: left;
         position: relative;
+        clear: right;
+
+        @media #{$medium-up} {
+            float: left;
+        }
 
         &:hover ul, &:focus ul {
-            display:block;
-            z-index: 9;
-            color: $yellow-color;
-            background:darken($primary-color, 10%);
+            @media #{$medium-up} {
+                display:block;
+                z-index: 9;
+                color: $yellow-color;
+                background:darken($primary-color, 10%);
+            }
         }
 
         a {
@@ -117,18 +123,24 @@ body {
             padding: 24px 20px;
             text-decoration: none;
             position: relative;
+            text-align: right;
 
             &:hover, .current  {
-                color: $yellow-color;
+                @media #{$medium-up} {
+                    color: $yellow-color;
+                }
             }
         }
 
         .sub-menu {
-            position: absolute;
-            display: none;
-            margin: 0;
-            top: 76px; // aligned with navbar bottom
-            left: 20px;
+            @media #{$medium-up} {
+                display: none;
+                position: absolute;
+                margin: 0;
+                top: 76px; // aligned with navbar bottom
+                left: 20px;
+            }
+
             li {
                 position: relative;
 
@@ -136,6 +148,38 @@ body {
                     padding: 18px 18px;
                 }
             }
+        }
+    }
+    .menu-toggle {
+        display: inline-block;
+        width: rem-calc(60);
+        padding: 25px 10px;
+        text-decoration: none;
+        position: relative;
+        float: right;
+        right: 80px;
+
+        @media #{$medium-up} {
+            display: none;
+        }
+
+        .icon-menu {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .main-menu {
+        visibility: hidden;
+        height: 0px;
+
+        @media #{$medium-up} {
+            visibility: visible;
+            height: auto;
+        }
+
+        &.visible {
+            visibility: visible;
+            height: auto;
         }
     }
 }
@@ -174,8 +218,19 @@ body {
         margin-top: rem-calc(20);
         margin-bottom: rem-calc(20);
 
+        .program-list-wrap {
+            min-height: 50px;
+        }
+        .no-posts {
+            margin: 0;
+        }
+
         ul.program-list {
-            @include block-grid(4);
+            @include block-grid(1);
+
+            @media #{$medium-up} {
+                @include block-grid(4);
+            }
 
             .entry-title {
                 font-size: rem-calc(20);
@@ -203,7 +258,15 @@ body {
         }
 
         .news-entry {
-            @include grid-column(4);
+            @include grid-column(12);
+
+            article {
+                margin-bottom: 10px;
+            }
+
+            @media #{$medium-up} {
+                @include grid-column(4);
+            }
             img.button {
                 width: 24px;
                 height: auto;
@@ -230,7 +293,10 @@ body {
 .single-post,
 .type-page {
     .body {
-        @include grid-column(7);
+        @include grid-column(12);
+        @media #{$medium-up} {
+            @include grid-column(7);
+        }
         margin-bottom: rem-calc(25);
     }
     /* TODO sidebar */
@@ -315,7 +381,11 @@ body {
         @include grid-row();
 
         #footer-about {
-            @include grid-column(7);
+            @include grid-column(12);
+
+            @media #{$medium-up} {
+                @include grid-column(7);
+            }
 
             p,
             {
@@ -330,7 +400,7 @@ body {
 
             ul{
                 list-style: none;
-                display: inline-block;
+                display: block;
                 margin: 0;
                 padding: 0;
 
@@ -383,4 +453,11 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+}
+.fadein {
+    animation: fadein 1.5s;
+}
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0px); }
 }

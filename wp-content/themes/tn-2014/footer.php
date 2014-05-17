@@ -3,7 +3,6 @@
 	<div id="footer-container">
         <div id="footer-about">
             <h2><a href="om-oss/" class="black">Teater Neuf</a></h2>
-            <!-- TODO: Move to Theme -> Customize -->
             <a href="https://viteboka.studentersamfundet.no/Den_Hvide_Knap"><img class="knapp-hvit" src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/knapp_hvit.png" /></a>
             <p><?php echo $footer_about_text; ?></p>
             <ul>

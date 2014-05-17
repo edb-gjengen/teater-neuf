@@ -1,33 +1,21 @@
 <?php get_header(); ?>
 
-		<div id="content" class="container_12">
+<div id="content">
 
-			<article <?php neuf_post_class(); ?>>
+    <article <?php neuf_post_class(); ?>>
+        <h1 class="entry-title">404: Denne siden er på grisefest</h1>
 
-				<div class="grid_6">
+        <div class="body">
+            <div class="entry-content">
+                    <p>Lykke til videre.</p>
+            </div> <!-- .entry-content -->
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/piggies.jpg" alt="" />
+        </div>
 
-					<h1 class="entry-title">404: Denne siden er på grisefest</h1>
+        <div class="featured-image">
+        </div>
 
-					<div class="entry-content">
-						<p>Lykke til videre.</p>
-					</div> <!-- .entry-content -->
-
-				</div> <!-- .grid_6 -->
-
-				<div class="grid_6">
-
-					<div class="vedlegg">
-						<div class="nyhetsbilde">
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/img/piggies.jpg" alt="" />
-						</div> <!-- .nyhetsbilde -->
-
-					</div> <!-- .vedlegg -->
-
-				</div> <!-- .grid_6 -->
-
-			</article> <!-- .post -->
-
-<?php //get_sidebar(); ?>
+    </article> <!-- .hentry -->
 
 </div> <!-- #content -->
 
