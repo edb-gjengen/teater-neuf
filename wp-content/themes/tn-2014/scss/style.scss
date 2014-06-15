@@ -226,6 +226,7 @@ body {
         }
 
         ul.program-list {
+            position: relative;
             @include block-grid(1);
 
             @media #{$medium-up} {
@@ -458,6 +459,6 @@ body {
     animation: fadein 1.5s;
 }
 @keyframes fadein {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0px); }
+    from { opacity: 0; top: -10px; }
+    to { opacity: 1; top: 0px; }
 }
