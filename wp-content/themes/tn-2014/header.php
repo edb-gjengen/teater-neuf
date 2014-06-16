@@ -21,7 +21,7 @@
 </head>
 
 <body <?php neuf_body_class(); ?>>
-    <div id="ribbon"><a href="http://studentersamfundet.no"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/ribbon.gif" /></a></div>
+    <div id="ribbon"><a href="http://studentersamfundet.no"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/ribbon.png" /></a></div>
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
