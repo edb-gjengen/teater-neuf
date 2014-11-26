@@ -38,6 +38,7 @@ msgstr "Flere gallerier"
 msgid "More asides"
 msgstr "Flere notiser"
 
+#. translators: used with More archives link
 #: inc/widgets.php:206
 msgid "%s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "%s <span class=\"meta-nav\">&rarr;</span>"
@@ -52,6 +53,7 @@ msgstr "fremhevet"
 msgid "Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts."
 msgstr "Bruk denne widgeten for å vise dine siste notis-, sitat-, video-, lyd-, bilde-, galleri- og lenke-innlegg."
 
+#. Theme URI of the plugin/theme
 msgid "http://wordpress.org/themes/twentyfourteen"
 msgstr "http://wordpress.org/themes/twentyfourteen"
 
@@ -93,6 +95,7 @@ msgstr "Stikkord"
 msgid "Don&rsquo;t display tag on front end."
 msgstr "Ikke vis dette stikkordet på fremsidene."
 
+#. Description of the plugin/theme
 msgid "In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier."
 msgstr "I 2014 gjør vårt standardtema deg i stand til å lage et responsivt magasinnettsted med et moderne design. Fremhev ditt favorittinnhold i et rutenett eller en slider. Bruk de tre widgetområdene for å tilpasse nettstedet og endre layouten med fullbreddeformat og bidragsytersider for å fremheve dine ulike forfattere. Å lage et magasinnettsted med WordPress har aldri vært enklere."
 
@@ -215,6 +218,7 @@ msgstr "Antall innlegg som skal vises:"
 msgid "Post format to show:"
 msgstr "Innleggsformat som skal vises:"
 
+#. Template Name of the plugin/theme
 msgid "Contributor Page"
 msgstr "Bidragsyters side"
 
@@ -301,6 +305,8 @@ msgstr "% kommentarer"
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Les videre <span class=\"meta-nav\">&rarr;</span>"
 
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.2)  #-#-#-#-#
+#. Author URI of the plugin/theme
 #: footer.php:21
 msgid "http://wordpress.org/"
 msgstr "http://nb.wordpress.org/"
@@ -414,12 +420,16 @@ msgstr "Sitater"
 msgid "Search Results for: %s"
 msgstr "Søkeresultater for: %s"
 
+#. #-#-#-#-#  twentyfourteen.pot (Twenty Fourteen 1.2)  #-#-#-#-#
+#. Theme Name of the plugin/theme
 #: inc/customizer.php:99
 msgid "Twenty Fourteen"
 msgstr "Twenty Fourteen"
 
+#. Author of the plugin/theme
 msgid "the WordPress team"
 msgstr "WordPress-gjengen"
 
+#. Template Name of the plugin/theme
 msgid "Full Width Page"
 msgstr "Side i full bredde"
