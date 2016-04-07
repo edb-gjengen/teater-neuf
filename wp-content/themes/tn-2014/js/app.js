@@ -14,8 +14,9 @@ function format_posts(posts) {
     for(var i=0; i< posts.length; i++) {
         var post = posts[i];
         html += '<li><a href="'+ post.url +'"><div>';
+        console.log(post);
         if(post.thumbnail_images) {
-            html += '<img src="'+ post.thumbnail_images["four-column-thumb"].url +'" /><br/>';
+            html += '<img src="'+ post.thumbnail_images["four-column"].url +'" /><br/>';
         } else {
             var stylesheet_dir = jQuery("meta[name=x-stylesheet-directory]").attr('content');
             html += '<img src="'+ stylesheet_dir +'/img/placeholder.gif" /><br/>';
